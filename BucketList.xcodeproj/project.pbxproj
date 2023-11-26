@@ -11,6 +11,7 @@
 		5AA87C102B13B1D300401B02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA87C0F2B13B1D300401B02 /* ContentView.swift */; };
 		5AA87C122B13B1D900401B02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA87C112B13B1D900401B02 /* Assets.xcassets */; };
 		5AA87C152B13B1D900401B02 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA87C142B13B1D900401B02 /* Preview Assets.xcassets */; };
+		5AA87C1C2B13C41D00401B02 /* FileManager+GetDocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA87C1B2B13C41D00401B02 /* FileManager+GetDocumentsDirectory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		5AA87C0F2B13B1D300401B02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		5AA87C112B13B1D900401B02 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5AA87C142B13B1D900401B02 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5AA87C1B2B13C41D00401B02 /* FileManager+GetDocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager+GetDocumentsDirectory.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 				5AA87C0F2B13B1D300401B02 /* ContentView.swift */,
 				5AA87C112B13B1D900401B02 /* Assets.xcassets */,
 				5AA87C132B13B1D900401B02 /* Preview Content */,
+				5AA87C1B2B13C41D00401B02 /* FileManager+GetDocumentsDirectory.swift */,
 			);
 			path = BucketList;
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			files = (
 				5AA87C102B13B1D300401B02 /* ContentView.swift in Sources */,
 				5AA87C0E2B13B1D300401B02 /* BucketListApp.swift in Sources */,
+				5AA87C1C2B13C41D00401B02 /* FileManager+GetDocumentsDirectory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
