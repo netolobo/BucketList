@@ -19,6 +19,7 @@ struct ContentView: View {
                         VStack {
                             Image(systemName: "star.circle")
                                 .resizable()
+                                .scaledToFit()
                                 .foregroundColor(.red)
                                 .background(.white)
                                 .clipShape(Circle())
@@ -48,19 +49,20 @@ struct ContentView: View {
                             viewModel.addLocation()
                         } label: {
                             Image(systemName: "plus")
+                                .padding()
+                                .background(.black.opacity(0.75))
+                                .foregroundStyle(.white)
+                                .font(.title)
+                                .clipShape(Circle())
+                                .padding(.trailing)
                         }
-                        .padding()
-                        .background(.black.opacity(0.75))
-                        .foregroundStyle(.white)
-                        .font(.title)
-                        .clipShape(Circle())
-                        .padding(.trailing)
+                        
                     }
                 }
                 .sheet(item: $viewModel.selectedPlace) { place in
-                    EditView(location: place) {
+                    EditView(viewModel: EditViewModel(location: place) {
                         viewModel.updateLocation(location: $0)
-                    }
+                    })
                 }
             }
         } else {
@@ -71,6 +73,9 @@ struct ContentView: View {
             .background(.blue)
             .foregroundStyle(.white)
             .clipShape(Capsule())
+            .alert("Authentication result", isPresented: $viewModel.showingAuthenticateError) {
+                
+            }
         }
         
     }

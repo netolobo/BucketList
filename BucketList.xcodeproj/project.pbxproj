@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5A9F2CC52B176708001CFF19 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F2CC42B176708001CFF19 /* Result.swift */; };
 		5A9F2CC72B17E428001CFF19 /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F2CC62B17E428001CFF19 /* ContentView-ViewModel.swift */; };
+		5A9F2CCE2B19414E001CFF19 /* EditViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9F2CCD2B19414D001CFF19 /* EditViewModel.swift */; };
 		5AA87C0E2B13B1D300401B02 /* BucketListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA87C0D2B13B1D300401B02 /* BucketListApp.swift */; };
 		5AA87C102B13B1D300401B02 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA87C0F2B13B1D300401B02 /* ContentView.swift */; };
 		5AA87C122B13B1D900401B02 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5AA87C112B13B1D900401B02 /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* Begin PBXFileReference section */
 		5A9F2CC42B176708001CFF19 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		5A9F2CC62B17E428001CFF19 /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
+		5A9F2CCD2B19414D001CFF19 /* EditViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditViewModel.swift; sourceTree = "<group>"; };
 		5AA87C0A2B13B1D300401B02 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5AA87C0D2B13B1D300401B02 /* BucketListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListApp.swift; sourceTree = "<group>"; };
 		5AA87C0F2B13B1D300401B02 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +44,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A9F2CCA2B194072001CFF19 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5AA87C0F2B13B1D300401B02 /* ContentView.swift */,
+				5AF0FB932B169BB200E235A0 /* EditView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5A9F2CCB2B1940A2001CFF19 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AF0FB912B16934500E235A0 /* Location.swift */,
+				5AA87C1B2B13C41D00401B02 /* FileManager-DocumentsDirectory.swift */,
+				5A9F2CC42B176708001CFF19 /* Result.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5A9F2CCC2B1940BF001CFF19 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5A9F2CC62B17E428001CFF19 /* ContentView-ViewModel.swift */,
+				5A9F2CCD2B19414D001CFF19 /* EditViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		5AA87C012B13B1D300401B02 = {
 			isa = PBXGroup;
 			children = (
@@ -62,14 +92,11 @@
 			isa = PBXGroup;
 			children = (
 				5AA87C0D2B13B1D300401B02 /* BucketListApp.swift */,
-				5AA87C0F2B13B1D300401B02 /* ContentView.swift */,
+				5A9F2CCB2B1940A2001CFF19 /* Model */,
+				5A9F2CCA2B194072001CFF19 /* View */,
+				5A9F2CCC2B1940BF001CFF19 /* ViewModel */,
 				5AA87C112B13B1D900401B02 /* Assets.xcassets */,
 				5AA87C132B13B1D900401B02 /* Preview Content */,
-				5AA87C1B2B13C41D00401B02 /* FileManager-DocumentsDirectory.swift */,
-				5AF0FB912B16934500E235A0 /* Location.swift */,
-				5AF0FB932B169BB200E235A0 /* EditView.swift */,
-				5A9F2CC42B176708001CFF19 /* Result.swift */,
-				5A9F2CC62B17E428001CFF19 /* ContentView-ViewModel.swift */,
 			);
 			path = BucketList;
 			sourceTree = "<group>";
@@ -157,6 +184,7 @@
 				5AF0FB942B169BB200E235A0 /* EditView.swift in Sources */,
 				5AA87C0E2B13B1D300401B02 /* BucketListApp.swift in Sources */,
 				5AF0FB922B16934500E235A0 /* Location.swift in Sources */,
+				5A9F2CCE2B19414E001CFF19 /* EditViewModel.swift in Sources */,
 				5A9F2CC72B17E428001CFF19 /* ContentView-ViewModel.swift in Sources */,
 				5AA87C1C2B13C41D00401B02 /* FileManager-DocumentsDirectory.swift in Sources */,
 			);
@@ -294,7 +322,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BucketList/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticat yourself to unlock your places.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock your places.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -323,7 +351,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BucketList/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticat yourself to unlock your places.";
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "Please authenticate yourself to unlock your places.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

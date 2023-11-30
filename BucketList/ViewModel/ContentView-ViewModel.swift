@@ -16,6 +16,8 @@ extension ContentView {
         private (set) var locations : [Location]
         var selectedPlace: Location?
         var isUnlocked = false
+        var authenticateErrorMessage = ""
+        var showingAuthenticateError = false
         
         let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPlaces")
         
@@ -57,18 +59,18 @@ extension ContentView {
             var error: NSError?
             
             if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error) {
-                let reason = "Please authenticat yourself to unlock your places."
+                let reason = "Please authenticate yourself to unlock your places."
                 
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
                     if success {
                         self.isUnlocked = true
-                        
                     } else {
-                        //error
+                        print("Error authenticating: \(authenticationError?.localizedDescription)")
                     }
                 }
             } else {
-                //no biometrics
+                self.authenticateErrorMessage = "Biometric is not available!"
+                self.showingAuthenticateError = true
             }
             
         }
